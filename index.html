@@ -3,193 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة بالمصرى | بوابة نتائج الشهادة الثانوية 2025</title>
     
-    <title>نتيجة بالمصرى</title>
+    <meta name="description" content="استعلم فوراً عن نتيجة الثانوية العامة 2025 بالاسم ورقم الجلوس. موقع نتيجة بالمصرى يوفر أسرع رابط للنتائج الرسمية.">
     
-    <meta name="description" content="استعلم عن نتائج الثانوية العامة 2025 برقم الجلوس في موقع نتيجة بالمصرى رابط مباشر وموثوق لدرجات الطلاب، بالإضافة إلى معلومات تنسيق الجامعات والتوزيع الجغرافي.">
-    <meta name="keywords" content="نتائج الثانوية العامة, نتيجة الثانوية العامة 2025 برقم الجلوس, تنسيق الجامعات, موقع الوزارة الرسمي للنتائج, الثانوية العامة مصر 2025, نتيجة بالمصرى">
-    <link rel="canonical" href="https://yourwebsite.com/natiga-awlanin-2025">
     <style>
-        /* (تنسيقات CSS الموحدة لجميع الصفحات) */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
         :root {
-            --primary-color: #e60000;
-            --secondary-color: #007bff;
-            --background-color: #f8f9fa;
-            --dark-text: #212529;
-            --light-border: #ddd;
+            --primary: #d63031; /* أحمر جذاب */
+            --secondary: #0984e3; /* أزرق ملكي */
+            --accent: #00b894; /* أخضر للنجاح */
+            --bg: #f0f2f5;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Arial', Tahoma, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--dark-text);
-            direction: rtl;
-            text-align: right;
-            line-height: 1.6;
+            font-family: 'Cairo', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg);
+            color: #2d3436;
         }
 
+        /* الهيدر المطور */
         .header {
-            background-color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary), #074b83);
             color: white;
-            padding: 20px 5%;
+            padding: 30px 20px;
             text-align: center;
+            border-bottom: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .logo {
-            font-size: 2em;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-        }
-        .hero-result {
-            min-height: 60vh;
+        .logo { font-size: 2.5em; font-weight: 900; color: white; text-decoration: none; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        /* منطقة البحث */
+        .hero {
+            padding: 60px 20px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding: 50px 5%;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
         }
-        .result-card {
-            background-color: white;
+        .search-card {
+            background: var(--white);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
-            max-width: 650px; 
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 600px;
             width: 100%;
-            text-align: right; 
+            text-align: center;
+            border: 1px solid #eee;
         }
-        .result-card h2 {
-            color: var(--secondary-color);
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 10px;
+        .search-card h2 { color: var(--secondary); font-size: 1.8em; margin-bottom: 10px; }
+        .search-card p { color: #636e72; margin-bottom: 30px; }
+
+        .input-group {
+            display: flex;
+            background: #f9f9f9;
+            border: 2px solid #dfe6e9;
+            border-radius: 50px;
+            padding: 5px 10px;
+            transition: 0.3s;
         }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
+        .input-group:focus-within { border-color: var(--secondary); box-shadow: 0 0 10px rgba(9, 132, 227, 0.2); }
+        
+        #searchInput {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 15px;
+            font-size: 1.1em;
+            font-family: 'Cairo';
+            outline: none;
+        }
+        
+        .search-btn {
+            background: var(--primary);
             color: white;
-            padding: 15px 40px;
-            text-decoration: none;
             border: none;
             border-radius: 50px;
-            font-size: 1.4em;
+            padding: 0 35px;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 6px 15px rgba(230, 0, 0, 0.4);
-            transition: background-color 0.3s, transform 0.2s;
-            margin-top: 10px;
-            text-align: center;
+            transition: 0.3s;
         }
-        .cta-button:hover {
-            background-color: #cc0000;
-            transform: translateY(-3px);
+        .search-btn:hover { background: #b32525; transform: scale(1.05); }
+
+        /* عرض النتيجة الاحترافية */
+        #displayArea { margin-top: 30px; }
+        .result-box {
+            background: linear-gradient(to bottom, #ffffff, #fdfdfd);
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #eee;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.5s ease;
         }
-        .content-section, .faq-section, .policy-content {
-            padding: 40px 5%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .content-section h2, .policy-content h1 {
-            color: var(--secondary-color);
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--light-border);
-            padding-bottom: 10px;
-        }
-        .faq-item {
-            background-color: white;
-            border: 1px solid var(--light-border);
-            border-radius: 8px;
-            margin-bottom: 20px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        .faq-question {
+        .result-box::before {
+            content: "ناجح";
+            position: absolute;
+            top: 10px; left: -25px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(-45deg);
+            font-size: 0.8em;
             font-weight: bold;
-            color: var(--secondary-color);
-            font-size: 1.1em;
-            margin-bottom: 10px;
         }
-        .footer {
-            background-color: var(--dark-text);
-            color: white;
-            padding: 30px 5%;
-            text-align: center;
+        .student-info { text-align: right; margin-bottom: 15px; }
+        .student-name { color: var(--secondary); font-size: 1.4em; font-weight: bold; display: block; }
+        .student-id { color: #b2bec3; font-size: 0.9em; }
+        
+        .score-circle {
+            background: var(--bg);
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center; justify-content: center;
+            margin: 0 auto;
+            border: 5px solid var(--accent);
+            font-size: 2em;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        /* أزرار التواصل */
+        .actions { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Cairo';
             font-size: 0.9em;
+            display: flex; align-items: center; gap: 5px;
         }
-        .footer-links a {
-            color: #ccc;
-            margin: 0 15px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover {
-            color: white;
-        }
+        .btn-download { background: #2d3436; color: white; }
+        .btn-facebook { background: #1877f2; color: white; }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* الفوتر */
+        .footer { background: #2d3436; color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        .footer a { color: #00cec9; text-decoration: none; margin: 0 10px; }
     </style>
-</head>
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3685147240029344"
-     crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
     <header class="header">
-        <div style="max-width: 1200px; margin: auto;">
-            <a href="index.html" class="logo">نتيجة بالمصرى</a>
-            <p style="margin: 5px 0 0; font-size: 1.1em;">بوابة نتائج الثانوية العامة 2025</p>
-        </div>
+        <a href="#" class="logo">نتيجة بالمصرى 2025</a>
+        <p>الرابط المعتمد لنتائج الثانوية العامة في مصر</p>
     </header>
 
-    <section class="hero-result">
-        <div class="result-card">
-            <h2>نتائج الثانوية العامة 2025</h2>
-            <p>مرحبًا بك في موقع **نتيجه بالمصرى 2025**!</p>
-            <p>يمكنك الاستعلام عن نتيجتك بسهولة وسرعة باستخدام **رقم الجلوس** فقط. نوفر لك رابطًا مباشرًا للوصول إلى **النتائج الرسمية من وزارة التربية والتعليم**، مع تجربة آمنة وموثوقة لجميع الطلاب.</p>
-            <div class="gateway-title" style="text-align: center;">بوابة نتيجه بالمصرى</div>
-
-            <div style="text-align: center;">
-                <a href="https://g12.emis.gov.eg" target="_blank" class="cta-button">
-                    الانتقال إلى موقع النتائج
-                </a>
+    <main class="hero">
+        <div class="search-card">
+            <h2>✨ استعلم عن نتيجتك الآن</h2>
+            <p>ادخل اسمك أو رقم جلوسك لعرض الدرجات فوراً</p>
+            
+            <div class="input-group">
+                <input type="text" id="searchInput" placeholder="اكتب اسمك أو رقم جلوسك...">
+                <button class="search-btn" id="searchBtn" onclick="fetchResults()">بحث</button>
             </div>
-            <span class="note-text" style="text-align: center;">سيتم فتح الموقع في تبويب جديد لضمان أفضل تجربة.</span>
-        </div>
-    </section>
-    
-    <section class="content-section">
-        <h2>معلومات هامة حول تنسيق الثانوية العامة والقبول بالجامعات</h2>
-        <p>لا تتوقف رحلتك عند معرفة **نتيجة الثانوية العامة**! نوفر لك هنا ملخصاً لأبرز النقاط التي يجب أن تعرفها حول عملية التنسيق والتوزيع الجغرافي للقبول بالجامعات المصرية:</p>
-        <h3>مراحل التنسيق الرئيسية:</h3>
-        <ul>
-            <li>**المرحلة الأولى:** مخصصة لأعلى المجاميع، ويتم فيها تحديد الحد الأدنى لكليات القمة.</li>
-            <li>**المرحلة الثانية والثالثة:** يتم استكمال الأماكن الشاغرة بالكليات والمعاهد وفقاً لشرائح المجاميع الأقل.</li>
-        </ul>
-        <p>تابع موقع **التنسيق الرسمي** بانتظام لمعرفة المواعيد الدقيقة لبدء كل مرحلة.</p>
-    </section>
 
-    <section class="faq-section">
-        <h2>الأسئلة الشائعة حول نتيجة الثانوية العامة</h2>
-        <div class="faq-item">
-            <h3 class="faq-question">متى يتم إعلان نتيجة الثانوية العامة 2025؟</h3>
-            <p class="faq-answer">عادةً ما يتم إعلان النتيجة بعد حوالي 10 إلى 14 يوماً من انتهاء آخر امتحان، ويتم الإعلان عن الموعد الرسمي بواسطة وزارة التربية والتعليم.</p>
+            <div id="displayArea">
+                </div>
         </div>
-        <div class="faq-item">
-            <h3 class="faq-question">هل يمكنني الاستعلام عن النتيجة بالاسم فقط؟</h3>
-            <p class="faq-answer">لا، الطريقة المعتمدة والرسمية للاستعلام عن النتيجة هي عن طريق إدخال رقم الجلوس الخاص بالطالب فقط.</p>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-links">
-            <a href="privacy.html">سياسة الخصوصية</a>
-            <a href="terms.html">شروط الاستخدام</a>
-            <a href="about.html">من نحن</a>
-            <a href="contact.html">اتصل بنا</a> 
+        <p>© 2025 بوابة نتيجة بالمصرى | جميع الحقوق محفوظة</p>
+        <div style="margin-top: 10px;">
+            <a href="#">من نحن</a> | <a href="#">سياسة الخصوصية</a> | <a href="#">اتصل بنا</a>
         </div>
-        <p style="margin-top: 15px;">© 2025 موقع نتيجة بالمصرى جميع الحقوق محفوظة.</p>
     </footer>
 
+    <script>
+    async function fetchResults() {
+        const query = document.getElementById('searchInput').value.trim();
+        const displayArea = document.getElementById('displayArea');
+        const btn = document.getElementById('searchBtn');
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbx-GU-bDTcYoOo6v4U1MCj24K9hThrsuw_YCW4hKkzG7Q8SZk4P6fpxwPeak9VouoIe/exec"; 
+
+        if (!query) return;
+
+        btn.disabled = true;
+        btn.innerHTML = "جاري..";
+        displayArea.innerHTML = "<div style='padding:20px'>🔍 جاري البحث في السجلات الرسمية...</div>";
+
+        try {
+            const response = await fetch(`${scriptUrl}?q=${encodeURIComponent(query)}`);
+            const result = await response.json();
+
+            btn.disabled = false;
+            btn.innerHTML = "بحث";
+            displayArea.innerHTML = ""; 
+
+            if (result.status === "success") {
+                result.data.forEach((item, index) => {
+                    const resId = `res-${index}`;
+                    displayArea.innerHTML += `
+                        <div class="result-box" id="${resId}">
+                            <div class="student-info">
+                                <span class="student-name">${item.name}</span>
+                                <span class="student-id">رقم الجلوس: ${item.id}</span>
+                            </div>
+                            <div class="score-circle">${item.score}</div>
+                            <p style="margin-top:10px; font-weight:bold; color:var(--accent)">تهانينا بالنجاح الباهر!</p>
+                        </div>
+                        <div class="actions">
+                            <button class="action-btn btn-download" onclick="downloadImage('${resId}', '${item.name}')">💾 حفظ الصورة</button>
+                            <button class="action-btn btn-facebook" onclick="shareFB('${item.score}', '${item.name}')">🔵 مشاركة</button>
+                        </div>
+                    `;
+                });
+            } else {
+                displayArea.innerHTML = "<div style='color:red; padding:20px;'>❌ لم نجد بيانات بهذا الاسم أو الرقم. راجع بياناتك وحاول مرة أخرى.</div>";
+            }
+        } catch (error) {
+            displayArea.innerHTML = "<div style='color:red; padding:20px;'>⚠️ خطأ في الاتصال بالسيرفر. حاول مرة ثانية.</div>";
+            btn.disabled = false;
+            btn.innerHTML = "بحث";
+        }
+    }
+
+    function downloadImage(id, name) {
+        html2canvas(document.getElementById(id), { backgroundColor: "#ffffff", scale: 2 }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = `نتيجة-${name}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        });
+    }
+
+    function shareFB(score, name) {
+        const text = encodeURIComponent(`الحمد لله! حصلت على ${score} في الثانوية العامة. ابحث عن نتيجتك الآن في موقع نتيجة بالمصرى!`);
+        window.open(`https://www.facebook.com/sharer/sharer.php?quote=${text}&u=${window.location.href}`, '_blank');
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", (e) => { if (e.key === "Enter") fetchResults(); });
+    </script>
 </body>
 </html>
