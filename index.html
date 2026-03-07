@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BR8DLBG08"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5BR8DLBG08');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نتيجة بالمصرى 2025 | نظام الـ 320 درجة</title>
-    
+    <title>نتيجة بالمصرى 2026 | بوابة نتائج الامتحانات بالاسم ورقم الجلوس</title>
+    <meta name="description" content="استعلم عن نتيجة الشهادة الإعدادية والثانوية 2026 عبر بوابة نتيجة بالمصرى. أسرع نظام للحصول على الدرجات فور اعتمادها لجميع المحافظات.">
+    <meta name="keywords" content="نتيجة بالمصرى, نتيجة الشهادة الاعدادية 2026, نتيجة الصف الثالث الاعدادي, نتيجة الثانوية العامة, محمد احمد حسن, نتيجة بالاسم, رقم الجلوس">
+    <meta name="author" content="محمد احمد حسن">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BR8DLBG08"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5BR8DLBG08');
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -23,103 +25,121 @@
         
         :root {
             --primary: #d63031; --secondary: #0984e3; --accent: #00b894;
-            --gold: #f1c40f; --bg: #f4f7f6; --warning: #fdcb6e;
+            --dark: #2d3436; --bg: #f4f7f6;
         }
 
-        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); margin: 0; padding: 0; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); margin: 0; padding: 0; overflow-x: hidden; }
+
+        .news-ticker {
+            background: #fff; border-bottom: 2px solid var(--primary);
+            padding: 10px 0; white-space: nowrap; overflow: hidden;
+            position: relative; font-weight: bold; color: var(--primary); z-index: 100;
+        }
+        .news-ticker span { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+        @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(100%, 0); } }
 
         .header {
-            background: linear-gradient(45deg, #074b83, #0984e3);
-            color: white; padding: 40px; text-align: center;
-            border-bottom: 5px solid var(--primary);
+            background: linear-gradient(135deg, #074b83, #0984e3);
+            color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--primary);
         }
 
-        .main-container { max-width: 800px; margin: -40px auto 50px; padding: 20px; }
-        
-        .search-card {
-            background: white; padding: 35px; border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center;
+        .main-logo {
+            max-width: 150px; height: auto; margin-bottom: 10px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
         }
+
+        .main-container { max-width: 850px; margin: -50px auto 50px; padding: 20px; }
+        .search-card {
+            background: white; padding: 40px; border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; animation: slideUp 0.8s ease;
+        }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
         .input-wrapper {
-            display: flex; border: 3px solid #eee; border-radius: 50px;
-            margin: 25px 0; overflow: hidden; transition: 0.3s;
+            display: flex; border: 3px solid #eee; border-radius: 50px; margin: 25px 0; overflow: hidden; transition: 0.3s;
         }
-        .input-wrapper:focus-within { border-color: var(--secondary); }
-        
-        #searchInput { flex: 1; border: none; padding: 15px 25px; font-size: 1.1em; outline: none; font-family: 'Cairo'; }
-        .search-btn { background: var(--secondary); color: white; border: none; padding: 0 35px; cursor: pointer; font-weight: bold; }
+        .input-wrapper:focus-within { border-color: var(--secondary); box-shadow: 0 0 15px rgba(9,132,227,0.2); }
+        #searchInput { flex: 1; border: none; padding: 18px 25px; font-size: 1.1em; outline: none; font-family: 'Cairo'; }
+        .search-btn { background: var(--secondary); color: white; border: none; padding: 0 40px; cursor: pointer; font-weight: 900; }
 
-        /* الشهادة */
-        #certArea {
-            background: white; border: 12px double #ddd; padding: 40px;
-            margin-top: 30px; display: none; position: relative;
-        }
-        .cert-score { font-size: 4.5em; color: var(--primary); font-weight: 900; margin: 10px 0; }
-        
-        /* ألوان الحالة */
-        .status-badge { font-size: 1.8em; font-weight: 900; padding: 10px; border-radius: 10px; display: inline-block; margin-top: 10px; }
-        .pass { color: var(--accent); border: 2px solid var(--accent); }
-        .fail { color: var(--primary); border: 2px solid var(--primary); }
-        .retest { color: var(--warning); border: 2px solid var(--warning); }
+        #certArea { background: #fff; border: 15px double #f1f1f1; padding: 30px; margin-top: 30px; display: none; border-radius: 10px; }
+        .cert-score { font-size: 5em; color: var(--primary); font-weight: 900; line-height: 1; margin: 15px 0; }
+        .status-badge { font-size: 1.8em; font-weight: 900; padding: 12px 25px; border-radius: 15px; display: inline-block; margin-top: 15px; }
+        .pass { background: #e6fffb; color: var(--accent); border: 2px solid var(--accent); }
+        .fail { background: #fff1f0; color: var(--primary); border: 2px solid var(--primary); }
 
-        .visitor-counter {
-            margin-top: 30px; color: #666; font-size: 1em;
-            background: #fff; padding: 12px 25px; border-radius: 50px;
-            display: inline-block; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-        }
-
-        .action-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; display: none; }
-        .btn { padding: 12px; border: none; border-radius: 10px; font-family: 'Cairo'; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
-        .btn-save { background: #2d3436; color: white; }
+        .action-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; display: none; }
+        .btn { padding: 15px; border: none; border-radius: 12px; font-family: 'Cairo'; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-save { background: var(--dark); color: white; }
         .btn-fb { background: #1877f2; color: white; }
 
-        .footer { background: #2d3436; color: white; padding: 30px; text-align: center; margin-top: 50px; }
+        .footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
+        .dev-name { color: #00b894; font-weight: bold; }
+
+        @media (max-width: 600px) {
+            .input-wrapper { flex-direction: column; border-radius: 20px; }
+            .search-btn { padding: 15px; border-radius: 0; }
+            .cert-score { font-size: 3.5em; }
+            .action-btns { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body onload="getRealVisitors()">
 
+    <div style="display:none;">
+        <h1>نتيجة الشهادة الاعدادية 2026 برقم الجلوس والاسم</h1>
+        <p>موقع نتيجة بالمصرى المطور بواسطة محمد احمد حسن لنتائج الامتحانات</p>
+    </div>
+
+    <div class="news-ticker">
+        <span>📢 تنبيه: تم رفع نتائج العام الدراسي 2026 لجميع المحافظات حالياً .. مبروك لكل الطلاب الناجحين .. تابعونا للحصول على آخر التحديثات ..</span>
+    </div>
+
     <header class="header">
-        <h1>نتيجة بالمصرى 2025</h1>
-        <p><i class="fas fa-users-viewfinder"></i> نظام النتائج الذكي المعتمد</p>
+        <img src="logo.png" alt="لوجو نتيجة بالمصرى" class="main-logo">
+        <h1 style="margin: 10px 0 5px;">بوابة نتيجة بالمصرى 2026</h1>
+        <p style="opacity: 0.9;"><i class="fas fa-user-graduate"></i> أسرع نظام ذكي لاستخراج النتائج في مصر</p>
     </header>
 
     <div class="main-container">
         <div class="search-card">
-            <h2>ابحث عن نتيجتك الحقيقية</h2>
+            <h2 style="color: var(--dark); margin-bottom: 10px;">استعلم عن نتيجتك الآن</h2>
             <div class="input-wrapper">
-                <input type="text" id="searchInput" placeholder="ادخل الاسم أو رقم الجلوس...">
-                <button class="search-btn" onclick="fetchResults()" id="searchBtn">بحث</button>
+                <input type="text" id="searchInput" placeholder="ادخل الاسم أو رقم الجلوس هنا...">
+                <button class="search-btn" onclick="fetchResults()">فحص النتيجة</button>
             </div>
             
-            <div id="loader" style="display:none;"><i class="fas fa-spinner fa-spin"></i> جاري استخراج النتيجة من السيرفر...</div>
+            <div id="loader" style="display:none; color: var(--secondary); font-weight: bold; margin: 20px 0;">
+                <i class="fas fa-circle-notch fa-spin fa-2x"></i><br>جاري الاتصال بقاعدة البيانات...
+            </div>
 
             <div id="certArea">
-                <h3 style="color:var(--secondary); margin:0;">بيان درجات الطالب</h3>
-                <div id="resName" style="font-size: 1.6em; font-weight: 900; margin-top: 15px;"></div>
-                <div id="resId" style="color: #888;"></div>
-                
+                <div style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px;">
+                    <h3 style="color:var(--secondary); margin:0; font-size: 1.5em;">بيان درجات النجاح 2026</h3>
+                    <small style="color: #999;">موثق عبر بوابة نتيجة بالمصرى الذكية</small>
+                </div>
+                <div id="resName" style="font-size: 1.8em; font-weight: 900; color: var(--dark);"></div>
+                <div id="resId" style="color: #777; font-size: 1.2em; margin-top: 5px;"></div>
                 <div class="cert-score" id="resScore">0</div>
-                <div id="resPercent" style="font-weight: bold; font-size: 1.2em; color: #555;"></div>
-                
+                <div id="resPercent" style="font-weight: 900; font-size: 1.6em; color: var(--secondary);"></div>
                 <div id="resStatus" class="status-badge"></div>
             </div>
 
             <div class="action-btns" id="actionBtns">
-                <button class="btn btn-save" onclick="downloadCert()"><i class="fas fa-download"></i> حفظ الشهادة</button>
-                <button class="btn btn-fb" onclick="shareFB()"><i class="fab fa-facebook"></i> مشاركة النجاح</button>
-            </div>
-
-            <div class="visitor-counter">
-                <i class="fas fa-chart-line" style="color: var(--secondary);"></i> 
-                إجمالي زيارات الموقع: <span id="vCount" style="font-weight: bold; color: var(--primary);">جاري التحميل...</span>
+                <button class="btn btn-save" onclick="downloadCert()"><i class="fas fa-download"></i> حفظ كصورة</button>
+                <button class="btn btn-fb" onclick="shareFB()"><i class="fab fa-facebook"></i> شارك نتيجتك</button>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <p>© 2025 جميع الحقوق محفوظة - موقع نتيجة بالمصرى</p>
+        <div style="margin-bottom: 25px;">
+            <a href="#" style="color: white; margin: 0 15px; font-size: 1.5em;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; margin: 0 15px; font-size: 1.5em;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>© 2026 جميع الحقوق محفوظة لـ <strong>نتيجة بالمصرى</strong></p>
+        <p>تم التطوير بواسطة المطور: <span class="dev-name">محمد احمد حسن</span></p>
+        <p><a href="privacy.html" style="color: #aaa; text-decoration: none;">سياسة الخصوصية</a></p>
     </footer>
 
     <script>
@@ -127,8 +147,7 @@
 
     async function fetchResults() {
         const query = document.getElementById('searchInput').value.trim();
-        if (!query) return;
-
+        if (!query) { alert("من فضلك ادخل الاسم أو رقم الجلوس أولاً"); return; }
         document.getElementById('loader').style.display = "block";
         document.getElementById('certArea').style.display = "none";
         document.getElementById('actionBtns').style.display = "none";
@@ -138,68 +157,39 @@
             const result = await response.json();
             document.getElementById('loader').style.display = "none";
 
-            if (result.status === "success") {
+            if (result.status === "success" && result.data.length > 0) {
                 const data = result.data[0];
                 const score = parseFloat(data.score);
                 const percent = ((score / 320) * 100).toFixed(2);
-                
                 document.getElementById('resName').innerText = data.name;
                 document.getElementById('resId').innerText = "رقم الجلوس: " + data.id;
                 document.getElementById('resScore').innerText = score;
                 document.getElementById('resPercent').innerText = `النسبة المئوية: ${percent}%`;
-
                 const statusDiv = document.getElementById('resStatus');
                 statusDiv.className = "status-badge"; 
-                
                 if (score >= 160) {
-                    statusDiv.innerText = "الحالة: نـــــاجح ✨";
-                    statusDiv.classList.add("pass");
+                    statusDiv.innerText = "النتيجة: نـــــاجح ✨"; statusDiv.classList.add("pass");
                     confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-                } else if (score >= 100) {
-                    statusDiv.innerText = "الحالة: له دور ثانٍ ⚠️";
-                    statusDiv.classList.add("retest");
                 } else {
-                    statusDiv.innerText = "الحالة: راسب ❌";
-                    statusDiv.classList.add("fail");
+                    statusDiv.innerText = "النتيجة: راسب ❌"; statusDiv.classList.add("fail");
                 }
-
                 document.getElementById('certArea').style.display = "block";
                 document.getElementById('actionBtns').style.display = "grid";
-            } else {
-                alert("لم يتم العثور على بيانات. تأكد من كتابة الاسم صحيحاً.");
-            }
-        } catch (e) { alert("خطأ في الاتصال بالسيرفر. حاول مرة أخرى."); }
-    }
-
-    // عداد زوار حقيقي يعتمد على خدمة CountAPI
-    async function getRealVisitors() {
-        try {
-            // ملاحظة: استبدل 'natiga-masry-2025' بأي اسم فريد لموقعك لضمان خصوصية العداد
-            const res = await fetch('https://api.countapi.xyz/hit/natiga-masry-2025/visits');
-            const data = await res.json();
-            // لزيادة الهيبة، سنبدأ العد من رقم كبير + القيمة الحقيقية
-            const displayCount = 4520 + data.value;
-            document.getElementById('vCount').innerText = displayCount.toLocaleString();
-        } catch (e) {
-            // حماية في حالة تعطل الخدمة الخارجية
-            document.getElementById('vCount').innerText = "5,102";
-        }
+            } else { alert("عفواً، لم يتم العثور على أي بيانات."); }
+        } catch (e) { document.getElementById('loader').style.display = "none"; alert("خطأ في الاتصال بقاعدة البيانات."); }
     }
 
     function downloadCert() {
-        const cert = document.getElementById('certArea');
-        html2canvas(cert, { scale: 2 }).then(canvas => {
+        html2canvas(document.getElementById('certArea'), { scale: 3 }).then(canvas => {
             const link = document.createElement('a');
-            link.download = `نتيجة_${document.getElementById('resName').innerText}.png`;
+            link.download = `نتيجة_بالمصري_2026.png`;
             link.href = canvas.toDataURL();
             link.click();
         });
     }
 
     function shareFB() {
-        const score = document.getElementById('resScore').innerText;
-        const text = encodeURIComponent(`الحمد لله نتيجتي ${score} من 320. ابحث عن نتيجتك في موقع نتيجة بالمصرى!`);
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&quote=${text}`, '_blank');
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
     }
     </script>
 </body>
