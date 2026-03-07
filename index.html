@@ -37,20 +37,20 @@
         .search-card { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; }
         .input-wrapper { display: flex; border: 3px solid #eee; border-radius: 50px; margin: 25px 0; overflow: hidden; }
         #searchInput { flex: 1; border: none; padding: 18px 25px; font-size: 1.1em; outline: none; font-family: 'Cairo'; }
-        .search-btn { background: var(--secondary); color: white; border: none; padding: 0 40px; cursor: pointer; font-weight: 900; }
+        .search-btn { background: var(--secondary); color: white; border: none; padding: 0 40px; cursor: pointer; font-weight: 900; display: flex; align-items: center; gap: 8px; }
         #certArea { background: #fff; border: 15px double #f1f1f1; padding: 30px; margin-top: 30px; display: none; border-radius: 10px; }
         .cert-score { font-size: 5em; color: var(--primary); font-weight: 900; line-height: 1; margin: 15px 0; }
         .status-badge { font-size: 1.8em; font-weight: 900; padding: 12px 25px; border-radius: 15px; display: inline-block; margin-top: 15px; }
         .pass { background: #e6fffb; color: var(--accent); border: 2px solid var(--accent); }
         .fail { background: #fff1f0; color: var(--primary); border: 2px solid var(--primary); }
-        .action-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; display: none; }
-        .btn { padding: 15px; border: none; border-radius: 12px; font-family: 'Cairo'; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .action-btns { display: flex; justify-content: center; margin-top: 25px; display: none; }
+        .btn { padding: 15px 40px; border: none; border-radius: 12px; font-family: 'Cairo'; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .btn-save { background: var(--dark); color: white; }
-        .btn-fb { background: #1877f2; color: white; }
         .seo-content { background: white; padding: 25px; border-radius: 20px; margin-top: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: justify; line-height: 1.8; }
         .footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
+        .footer a { color: #aaa; text-decoration: none; margin: 0 10px; }
         .dev-name { color: #00b894; font-weight: bold; }
-        @media (max-width: 600px) { .input-wrapper { flex-direction: column; border-radius: 20px; } .search-btn { padding: 15px; border-radius: 0; } .cert-score { font-size: 3.5em; } .action-btns { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .input-wrapper { flex-direction: column; border-radius: 20px; } .search-btn { padding: 15px; border-radius: 0; } .cert-score { font-size: 3.5em; } }
     </style>
 </head>
 <body>
@@ -70,7 +70,7 @@
             <h2 style="color: var(--dark); margin-bottom: 10px;">استعلم عن نتيجتك الآن</h2>
             <div class="input-wrapper">
                 <input type="text" id="searchInput" placeholder="ادخل الاسم أو رقم الجلوس هنا...">
-                <button class="search-btn" onclick="fetchResults()">فحص النتيجة</button>
+                <button class="search-btn" onclick="fetchResults()">فحص النتيجة <i class="fas fa-search"></i></button>
             </div>
             
             <div id="loader" style="display:none; color: var(--secondary); font-weight: bold; margin: 20px 0;">
@@ -90,8 +90,7 @@
             </div>
 
             <div class="action-btns" id="actionBtns">
-                <button class="btn btn-save" onclick="downloadCert()"><i class="fas fa-download"></i> حفظ كصورة</button>
-                <button class="btn btn-fb" onclick="shareFB()"><i class="fab fa-facebook"></i> شارك نتيجتك</button>
+                <button class="btn btn-save" onclick="downloadCert()"><i class="fas fa-download"></i> حفظ الشهادة كصورة</button>
             </div>
         </div>
 
@@ -109,7 +108,10 @@
     <footer class="footer">
         <p>© جميع الحقوق محفوظة لـ <strong>نتيجة بالمصرى</strong></p>
         <p>تم التطوير بواسطة: <span class="dev-name">محمد احمد حسن</span></p>
-        <p><a href="privacy.html" style="color: #aaa; text-decoration: none;">سياسة الخصوصية</a></p>
+        <p>
+            <a href="about.html">من نحن</a> | 
+            <a href="privacy.html">سياسة الخصوصية</a>
+        </p>
     </footer>
 
     <script>
@@ -144,7 +146,7 @@
                     statusDiv.innerText = "النتيجة: راسب ❌"; statusDiv.classList.add("fail");
                 }
                 document.getElementById('certArea').style.display = "block";
-                document.getElementById('actionBtns').style.display = "grid";
+                document.getElementById('actionBtns').style.display = "flex";
             } else { alert("عفواً، لم يتم العثور على أي بيانات."); }
         } catch (e) { document.getElementById('loader').style.display = "none"; alert("خطأ في الاتصال بقاعدة البيانات."); }
     }
@@ -156,10 +158,6 @@
             link.href = canvas.toDataURL();
             link.click();
         });
-    }
-
-    function shareFB() {
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
     }
     </script>
 </body>
